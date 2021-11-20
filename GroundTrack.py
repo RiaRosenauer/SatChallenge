@@ -7,16 +7,16 @@ import numpy as np
 
 
 #physical constants
-M_sun =1.989*10**(30) #in kg
-G = 6.67430*10**(-11) 
-Omega = math.pi*2/(24*60*60) # Earth rotation velocity
+M_earth =5.97*(10**(24)) #in kg
+G = 6.67430*(10**(-11))
+Omega = math.pi*2/(24*60*60) # Earth rotation angular velocity; earth rotating aroung z-axis
  
 
 
 #important 'basic' functions
 def velocity(height):
     #in m/s
-    return M_sun*G/height
+    return math.sqrt(M_earth*G/height)
 
 def period(height):
     return 2*math.pi*height/velocity(height)
@@ -29,15 +29,15 @@ def cart_tosphere(x,y,z):
     return r, np.arccos(z/r) ,math.atan2(x,y)
 
 
-height = 42000*10**(3) #in m vom Erdmittelpunkt
-alpha = math.pi/2 #in Grad (Winkel der Rotationsebene zur z-Achse)
+height = 35800*(10**(3)) #in m vom Erdmittelpunkt
+alpha = math.pi/2 #in degree (Winkel der Rotationsebene zur z-Achse)
 granularity = 100
 T_max = 10000
 
 
 T = period(height)
-#omega = 2*math.pi/T
-omega = math.pi*2/(24*60*60)
+omega = 2*math.pi/T
+
 
 #rotation vectors
 def R_x(theta):
