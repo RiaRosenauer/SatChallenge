@@ -29,6 +29,6 @@ should be something like this:
 ![2D_Groundtrack](images/2DGroundTrack.png)
 - **Animation.py**:
 
-In lines 148-159 and 221-226, adjust the animation and sattelite parameters to your needs. Also outcomment the uncomment the functions that are highlighted as different modi according to your wishes.
+In lines 148-159 and 221-226, adjust the animation and sattelite parameters to your needs. Also outcomment and/or uncomment the functions that are highlighted as different modi according to your wishes.
 The output is a mp4 file, looking similar too:
 ![2D_Animation](images/2DAnimation.png)
