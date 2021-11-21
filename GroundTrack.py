@@ -1,6 +1,4 @@
 #calculating the orbit of a sattelite projected onto earth
-
-
 import math
 import matplotlib.pyplot as plt
 import numpy as np
@@ -85,33 +83,6 @@ def get_theta(alpha, R_e, H):
     z = np.sqrt(y**2 + H**2 - 2 * y * H * np.cos(np.pi / 2 - alpha))
     return 2*np.arcsin(z / (2*(H+R_e))) 
 
-    
-def createConeSection(r, theta, phi):
-    R_e = 6.38 * 10**(6)
-    theta_min = get_theta(75*np.pi/180, R_e, r-R_e)
-    theta_max = get_theta(10*np.pi/180, R_e, r-R_e)
-
-    theta_array2 = np.linspace(theta_min, theta_max,16)
-    phi_array2 = np.linspace(0, 2*np.pi, 64)[:-1] #here vary number of points to make area denser 
-
-    gridSpherical = np.array([ [(i,j) for i in theta_array2] for j in phi_array2])
-
-
-    gridCartesian = [np.array(sphere_tocart(r, *i)) for i in list(itertools.chain(*gridSpherical)) ]
-
-    gridEarthFrame = [ R_z(phi).dot(R_y(theta).dot(vector)) for vector in gridCartesian ]
-
-    gridEarthFrameSpherical = [ cart_tosphere(*v)[1:] for v in gridEarthFrame]
-    #gridEarthFrameSpherical = [ v for v in gridEarthFrame]
-
-    return gridEarthFrameSpherical
-
-def plotConeSections(r, theta, phi):
-    A = createConeSection(r,theta, phi)
-    theta_section = [a[0] for a in A]
-    phi_section = [convert_angle(a[1]) for a in A]
-    plt.scatter(phi_section, theta_section, color='blue', s =20)
-
 
 height = 10050*(10**(3)) #in m vom Erdmittelpunkt
 alpha = np.pi/180*70 #in radiants (Winkel der Rotationsebene zur z-Achse)
@@ -122,7 +93,7 @@ Phi0 = math.pi/2 #initial Phi0 in radiants (Winkel des Punktes zur y-Achse); y-A
 
 T = period(height)
 
-T_max = int(10*T)
+T_max = int(2*T)
 omega = 2*math.pi/T
 #omega =  math.pi*2/(24*60*60)
 print(omega)
@@ -130,6 +101,5 @@ print(omega)
 plt.figure(figsize = (20,10))
 phi_arr, theta_arr = get_orbits(height, alpha, omega, granularity, T_max)
 plot_orbits(phi_arr, theta_arr)
-plotConeSections(height, math.pi/6, math.pi/6)
 
 plt.show()
