@@ -35,8 +35,6 @@ Open the project with Unity 2021.1.27f1 and import any missing dependencies usin
 # Usage
 1. 2D
 - **GroundTrack.py**:
-2. 3D
-- Open a Sample Scene in the Scenes Folder and Play to test out the simulation.
 
 Starting in line 87 of the file, simply put in the parameters of the satellite track that you would like to see and run the python script. The output
 should be something like this:
@@ -46,3 +44,6 @@ should be something like this:
 In lines 148-159 and 221-226, adjust the animation and sattelite parameters to your needs. Also outcomment and/or uncomment the functions that are highlighted as different modi according to your wishes.
 The output is a mp4 file, looking similar too:
 ![2D_Animation](images/2DAnimation.png)
+
+2. 3D
+- Open a Sample Scene in the Scenes Folder and Play to test out the simulation.
