@@ -25,8 +25,8 @@ In this repo are two visualisation tools:
 - GroundTrack.py
 Starting in line 87 of the file, simply put in the parameters of the satellite track that you would like to see and run the python script. The output
 should be something like this:
-![2D_Groundtrack](image/2DGroundTrack.png)
+![2D_Groundtrack](images/2DGroundTrack.png)
 - animation.py
 In lines 148-159 and 221-226, adjust the animation and sattelite parameters to your needs. Also outcomment the uncomment the functions that are highlighted as different modi according to your wishes.
 The output is a mp4 file, looking similar too:
-![2D_Ganimation](image/2DAnimation.png)
+![2D_Animation](images/2DAnimation.png)
