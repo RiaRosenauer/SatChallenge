@@ -223,7 +223,7 @@ writer = Writer(fps=19, metadata=dict(artist='Me'), bitrate=-1)
 ani = animation.FuncAnimation(fig, animate, frames=ts, interval=10)
 print('proceeding to save')
 #length of video in seconds: number of frames/fps
-ani.save('TestWithDots.mp4', writer=writer)
+ani.save('YourAnimation.mp4', writer=writer)
               
 print('saved')
 

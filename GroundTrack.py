@@ -87,7 +87,7 @@ def get_theta(alpha, R_e, H):
 height = 10050*(10**(3)) #in m vom Erdmittelpunkt
 alpha = np.pi/180*70 #in radiants (Winkel der Rotationsebene zur z-Achse)
 #alpha = np.pi/180*0
-granularity = 5000
+granularity = 5000 #The number of points that should be plotted between t=0 and t= T_max
 Theta0 = math.pi #initial Theta0 in radiants (Winkel des Punktes zur z-Achse); y-Achse auf Projektion von 0 bis 2*pi
 Phi0 = math.pi/2 #initial Phi0 in radiants (Winkel des Punktes zur y-Achse); y-Achse auf Projektion von 0 bis pi
 
@@ -96,7 +96,6 @@ T = period(height)
 T_max = int(2*T)
 omega = 2*math.pi/T
 #omega =  math.pi*2/(24*60*60)
-print(omega)
 
 plt.figure(figsize = (20,10))
 phi_arr, theta_arr = get_orbits(height, alpha, omega, granularity, T_max)
