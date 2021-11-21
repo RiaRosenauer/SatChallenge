@@ -1,7 +1,7 @@
 # SatChallenge
 Calculating communication satellite orbits for constant ground coverage. 
 Sat-Challenge of HackaTUM2021 (Rohde-Schwarz)
-![satellite_orbits_around_earth](images/earth_space.gif)
+![satellite_orbits_around_earth](images/githubPreview.gif)
 
 # Project Description
 This project prvides a working solution and some intermidiate simulation tools to the Sat-Challenge of HackaTUM2021 (prvided by Rohde-Schwarz). 
