@@ -28,9 +28,8 @@ In this repo are two visualisation tools:
 ```
 
 2. 3D 
-```
 Open the project with Unity 2021.1.27f1 and import any missing dependencies using the package manager.
-```
+
 
 # Usage
 1. 2D
