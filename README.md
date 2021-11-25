@@ -1,10 +1,11 @@
-# SatChallenge
-Calculating communication satellite orbits for constant ground coverage. 
-Sat-Challenge of HackaTUM2021 (Rohde-Schwarz)
+# SatChallenge (HackaTUM 2021)
+
+Winning entry of the HackaTUM 2021 Sat-Challenge given by Rohde & Schwarz. You can find our final submission for the challenge on [Devpost](https://devpost.com/software/hamiltumian).
+
 ![satellite_orbits_around_earth](images/githubPreview.gif)
 
 # Project Description
-This project prvides a working solution and some intermidiate simulation tools to the Sat-Challenge of HackaTUM2021 (prvided by Rohde-Schwarz). 
+Rohde & Schwarz tasked the attending teams at this years [HackaTUM](https://hack.tum.de/) with developing a satellite constellation intended for air traffic communication. Several factors had to be taken into account, including the Doppler shift, guaranteeing full coverage of fixed geographic regions at all times, and the directionality of the planes' communication antennas. This project provides a working solution and some of the intermidiate simulation tools we used to solve the problem.
 
 # Project Structure
 In this repo are two visualisation tools:
